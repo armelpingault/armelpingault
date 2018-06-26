@@ -9,10 +9,13 @@ var gulp = require('gulp');
 
 gulp.task('generate-service-worker', function(callback) {
     var swPrecache = require('sw-precache');
-    var rootDir = './';
+    var rootDir = './docs';
 
     swPrecache.write(`${rootDir}/service-worker.js`, {
-        staticFileGlobs: [rootDir + '/assets/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff}'],
+        staticFileGlobs: [
+            rootDir + '/*.{html,js,json,xml}',
+            rootDir + '/assets/**/*.{js,css,png,jpg,gif,svg,eot,ttf,woff}'
+        ],
         stripPrefix: rootDir
     }, callback);
 });

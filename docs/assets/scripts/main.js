@@ -1,3 +1,11 @@
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    console.log('NC', 'sdfsdfsd');
+    
+    navigator.serviceWorker.register('/service-worker.js');
+  });
+}
+
 var newXHR = new XMLHttpRequest();
 newXHR.addEventListener( 'load', reqListener );
 newXHR.open( 'GET', 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=https%3A%2F%2Fwww.armelpingault.com&key=AIzaSyDZkYecmL2TehrGSVRlhxnSehuSpMoWji8' );
@@ -40,11 +48,8 @@ window.lazyLoadOptions = {
   threshold: 50
 };
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js');
-  });
-}
+console.log('NC', 'sdfsd');
+
 
 if (navigator.userAgent.indexOf("Speed Insights") === -1) {
   var body = document.getElementsByTagName('body')[0];
