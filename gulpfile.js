@@ -16,6 +16,7 @@ gulp.task('generate-service-worker', function(callback) {
             rootDir + '/*.{html,js,json,xml}',
             rootDir + '/assets/**/*.{js,css,png,jpg,gif,svg,eot,ttf,woff}'
         ],
+        directoryIndex: rootDir,
         stripPrefix: rootDir
     }, callback);
 });
