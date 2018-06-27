@@ -1,7 +1,5 @@
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    console.log('NC', 'sdfsdfsd');
-    
     navigator.serviceWorker.register('/service-worker.js');
   });
 }
@@ -47,9 +45,6 @@ var myLazyLoad = new LazyLoad();
 window.lazyLoadOptions = {
   threshold: 50
 };
-
-console.log('NC', 'sdfsd');
-
 
 if (navigator.userAgent.indexOf("Speed Insights") === -1) {
   var body = document.getElementsByTagName('body')[0];
